@@ -11,27 +11,29 @@
          },
          "alarm":{
             "sumstate":{
-               "value":"0|2|3 (OK|ACKNOWLEDGED|ALARM)",
-               "type":"INT",
-               "permission":"READ",
-               "index":101
+               "value":"3"
             }
-         }
-      },
-      "lights":{
-         "item96":{
-            "name":"Empfang",
-            "sumstate":{
-               "value":"0;77;45476;0 (On|Off; DimmValue;RGBColor;Locked)",
-               "type":"STRING",
-               "permission":"READ",
-               "index":109600
-            },
-            "scmd":{
-               "value":"1|0|D100|C44782 (On|Off|Dim%|RGB24Bit)",
-               "type":"STRING",
-               "permission":"WRITE",
-               "index":109601
+         },
+         "meteo":{
+            "twilight":{
+               "value":"255.000000"
+            }
+         },
+         "lights":{
+            "item96":{
+               "name":"Empfang",
+               "sumstate":{
+                  "value":"0;77;45476;0 (On|Off; DimmValue;RGBColor;Locked)",
+                  "type":"STRING",
+                  "permission":"READ",
+                  "index":109600
+               },
+               "scmd":{
+                  "value":"1|0|D100|C44782 (On|Off|Dim%|RGB24Bit)",
+                  "type":"STRING",
+                  "permission":"WRITE",
+                  "index":109601
+               }
             }
          }
       }
