@@ -1,41 +1,1382 @@
 {
-   "v1":{
-      "globals":{
-         "network":{
-            "gekkoname":{
-               "value":"Hostname of myGEKKO",
-               "type":"STRING",
-               "permission":"READ",
-               "index":1
-            }
-         },
-         "alarm":{
-            "sumstate":{
-               "value":"3"
-            }
-         },
-         "meteo":{
-            "twilight":{
-               "value":"255.000000"
-            }
-         },
-         "lights":{
-            "item96":{
-               "name":"Empfang",
-               "sumstate":{
-                  "value":"0;77;45476;0 (On|Off; DimmValue;RGBColor;Locked)",
-                  "type":"STRING",
-                  "permission":"READ",
-                  "index":109600
-               },
-               "scmd":{
-                  "value":"1|0|D100|C44782 (On|Off|Dim%|RGB24Bit)",
-                  "type":"STRING",
-                  "permission":"WRITE",
-                  "index":109601
-               }
-            }
-         }
+  "v1":{
+    "globals":{
+      "network":{
+        "gekkoname":{
+          "value":"Hostname of myGEKKO",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1
+        }
+      },
+      "alarm":{
+        "sumstate":{
+          "value":"0|2|3 (OK|ACKNOWLEDGED|ALARM)",
+          "type":"INT",
+          "permission":"READ",
+          "index":101
+        }
+      },
+      "meteo":{
+        "twilight":{
+          "value":"55.8 (Act.Value)",
+          "type":"REAL",
+          "unit":"lux",
+          "permission":"READ",
+          "index":201
+        },
+        "humidity":{
+          "value":"25.8 (Act.Value)",
+          "type":"REAL",
+          "unit":"%rH",
+          "permission":"READ",
+          "index":202
+        },
+        "brightness":{
+          "value":"15.8 (Act.Value)",
+          "type":"REAL",
+          "unit":"kLux",
+          "permission":"READ",
+          "index":203
+        },
+        "wind":{
+          "value":"5.4 (Act.Value)",
+          "type":"REAL",
+          "unit":"m/s",
+          "permission":"READ",
+          "index":204
+        },
+        "temperature":{
+          "value":"25.4 (Act.Value)",
+          "type":"REAL",
+          "unit":"°C",
+          "permission":"READ",
+          "index":205
+        }
+      },
+      "profile":{
+        "sumstate":{
+          "value":"0|1 (Away|At Home)",
+          "type":"INT",
+          "permission":"READ",
+          "index":301
+        },
+        "scmd":{
+          "value":"P0|P1 (Away|At Home)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":302
+        }
       }
-   }
+    },
+    "lights":{
+      "item0":{
+        "name":"CL 33 + 34",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100000
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100001
+        }
+      },
+      "item1":{
+        "name":"36",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100100
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100101
+        }
+      },
+      "item2":{
+        "name":"CL 37",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100200
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100201
+        }
+      },
+      "item3":{
+        "name":"CL 38",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100300
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100301
+        }
+      },
+      "item4":{
+        "name":"CL 39",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100400
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100401
+        }
+      },
+      "item5":{
+        "name":"CL 35 40 41",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100500
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100501
+        }
+      },
+      "item8":{
+        "name":"CL 42",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100800
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100801
+        }
+      },
+      "item9":{
+        "name":"CL 43",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100900
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100901
+        }
+      },
+      "item10":{
+        "name":"CL 44",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101000
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101001
+        }
+      },
+      "item11":{
+        "name":"CL 56",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101100
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101101
+        }
+      },
+      "item16":{
+        "name":"CL 50",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101600
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101601
+        }
+      },
+      "item17":{
+        "name":"CL 52",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101700
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101701
+        }
+      },
+      "item18":{
+        "name":"CL 55",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101800
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101801
+        }
+      },
+      "item19":{
+        "name":"CL 51 53 54 57",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":101900
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":101901
+        }
+      },
+      "item20":{
+        "name":"CL 58",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102000
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102001
+        }
+      },
+      "item21":{
+        "name":"CL 59",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102100
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102101
+        }
+      },
+      "item22":{
+        "name":"CL 60",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102200
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102201
+        }
+      },
+      "item24":{
+        "name":"CL 45",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102400
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102401
+        }
+      },
+      "item25":{
+        "name":"CL 46 + 49",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102500
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102501
+        }
+      },
+      "item26":{
+        "name":"CL 47",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102600
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102601
+        }
+      },
+      "item27":{
+        "name":"CL 48",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102700
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102701
+        }
+      },
+      "item28":{
+        "name":"CL64+65",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102800
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102801
+        }
+      },
+      "item29":{
+        "name":"CL66+67",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":102900
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":102901
+        }
+      },
+      "item30":{
+        "name":"CL68",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":103000
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":103001
+        }
+      },
+      "item31":{
+        "name":"Centrale termica",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":103100
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":103101
+        }
+      }
+    },
+    "blinds":{
+      "item0":{
+        "name":"Oscurante 9",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200000
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200001
+        }
+      },
+      "item1":{
+        "name":"Oscurante 10",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200100
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200101
+        }
+      },
+      "item2":{
+        "name":"Oscurante 11",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200200
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200201
+        }
+      },
+      "item3":{
+        "name":"Oscurante 12",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200300
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200301
+        }
+      },
+      "item4":{
+        "name":"Oscurante 13",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200400
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200401
+        }
+      },
+      "item5":{
+        "name":"Oscurante 14",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200500
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200501
+        }
+      },
+      "item6":{
+        "name":"Oscurante 15",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200600
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200601
+        }
+      },
+      "item8":{
+        "name":"Oscurante 1",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200800
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200801
+        }
+      },
+      "item9":{
+        "name":"Oscurante 2",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200900
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200901
+        }
+      },
+      "item10":{
+        "name":"Oscurante 3",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201000
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201001
+        }
+      },
+      "item11":{
+        "name":"Oscurante 4",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201100
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201101
+        }
+      },
+      "item12":{
+        "name":"Oscurante 5",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201200
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201201
+        }
+      },
+      "item13":{
+        "name":"Oscurante 6",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201300
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201301
+        }
+      },
+      "item14":{
+        "name":"Oscurante 7",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201400
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201401
+        }
+      },
+      "item15":{
+        "name":"Oscurante 8",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":201500
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":201501
+        }
+      }
+    },
+    "vents":{
+      "item0":{
+        "name":"Piano Terra",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300000
+        },
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300001
+        }
+      },
+      "item1":{
+        "name":"Piano Primo",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300100
+        },
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300101
+        }
+      },
+      "item2":{
+        "name":"Deumidificatore pt",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300200
+        },
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300201
+        }
+      },
+      "item3":{
+        "name":"Deumidificatore pp",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300300
+        },
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300301
+        }
+      }
+    },
+    "loads":{
+      "item0":{
+        "name":"Asciugatrice",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400000
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400001
+        }
+      },
+      "item1":{
+        "name":"Lavatrice",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400100
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400101
+        }
+      },
+      "item2":{
+        "name":"Lavastoviglie",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400200
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400201
+        }
+      },
+      "item3":{
+        "name":"Pompa pozzo",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400300
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400301
+        }
+      },
+      "item4":{
+        "name":"Forno cucina",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400400
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400401
+        }
+      },
+      "item8":{
+        "name":"Campanello",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400800
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400801
+        }
+      },
+      "item9":{
+        "name":"Tirante bagno",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400900
+        },
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400901
+        }
+      }
+    },
+    "roomtemps":{
+      "item0":{
+        "name":"Taverna",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500000
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500001
+        }
+      },
+      "item1":{
+        "name":"Corridoio ing. retro",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500100
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500101
+        }
+      },
+      "item2":{
+        "name":"Lavanderia",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500200
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500201
+        }
+      },
+      "item3":{
+        "name":"Cucina soggiorno",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500300
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500301
+        }
+      },
+      "item4":{
+        "name":"Bagno",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500400
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500401
+        }
+      },
+      "item8":{
+        "name":"Matrimoniale",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500800
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500801
+        }
+      },
+      "item9":{
+        "name":"Camera 1 dx sopra sc",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500900
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500901
+        }
+      },
+      "item10":{
+        "name":"Camera 2 dx",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":501000
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":501001
+        }
+      },
+      "item11":{
+        "name":"Camera 3 sx",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":501100
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":501101
+        }
+      },
+      "item12":{
+        "name":"Bagno ospiti p1",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":501200
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":501201
+        }
+      },
+      "item13":{
+        "name":"Salone/disimpegno",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":501300
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":501301
+        }
+      },
+      "item14":{
+        "name":"Bagno matrimoniale",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":501400
+        },
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":501401
+        }
+      }
+    },
+    "heatingcircuits":{
+      "item0":{
+        "name":"circuito pt",
+        "sumstate":{
+          "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
+          "type":"STRING",
+          "permission":"READ",
+          "index":700000
+        }
+      },
+      "item1":{
+        "name":"circuito pp",
+        "sumstate":{
+          "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
+          "type":"STRING",
+          "permission":"READ",
+          "index":700100
+        }
+      }
+    },
+    "heatingsystems":{
+      "item0":{
+        "name":"pompa di calore",
+        "sumstate":{
+          "value":"0;0;54.2;60.0;1; (Type;0=Heating|1=Cooling;Flow temp.;Request temp.;1=On|0=Off;)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":750000
+        }
+      },
+      "item1000":{
+        "name":"acc. tecnico",
+        "sumstate":{
+          "value":"0;0;65.0;58.2;43.54;98.2;1; (Type;0=Heating|1=Cooling;Setpoint temp.;Top temp.;Bottom temp.;Collector temp.;1=On|0=Off;)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":751000
+        }
+      },
+      "item2000":{
+        "name":"ricircolo",
+        "sumstate":{
+          "value":"0;1;55.42;60.0; (Type;1=On|0=Off;Return temp.;Sepoint temp.;)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":752000
+        }
+      }
+    },
+    "energycosts":{
+      "item0":{
+        "name":"Consumo abitazione",
+        "sumstate":{
+          "value":"2.50;0.01;0.01;0.01;10.00;kWh;kW;0;0;6;0;0;0;0;0;1; (Act.power;Energy today;Energy month;Energy sum;Power max.;Unit energy;Unit power;Energy today 0-6;6-12;12-18;18-24;Energy yesterd. 0-6;6-12;12-18;18-24;1=Act.Power avaiable)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":800000
+        }
+      },
+      "item1":{
+        "name":"Produzione FVT",
+        "sumstate":{
+          "value":"2.50;0.01;0.01;0.01;10.00;kWh;kW;0;0;6;0;0;0;0;0;1; (Act.power;Energy today;Energy month;Energy sum;Power max.;Unit energy;Unit power;Energy today 0-6;6-12;12-18;18-24;Energy yesterd. 0-6;6-12;12-18;18-24;1=Act.Power avaiable)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":800100
+        }
+      }
+    },
+    "energymanager":{
+      "item0":{
+        "name":"",
+        "sumstate":{
+          "value":"TR; ;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3;0; (Name;;NetOk;SolarOk;BatOk;PNet[W];PExport[W];PSolar[W];PBat[W];PBatCharge[W];PHome;PAlternate[W];EImport[Wh];EExport[Wh];ESolar[Wh];EBat[Wh];EBatCharge[Wh];EHome[Wh];WIconTd;EPrevTd[kWh];WIconTm;EPrevTm[kWh];1=LoadSheddingActive;1=EMSActive;BatType;BatSoc[%];1=EMSEnabled;PMaxNet[kW];PNetExportMax[kW];)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":2700000
+        }
+      }
+    },
+    "actions":{
+      "item0":{
+        "name":"Apre oscuranti",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600000
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600001
+        }
+      },
+      "item1":{
+        "name":"Chiude oscuranti",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600100
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600101
+        }
+      },
+      "item2":{
+        "name":"Spegni luci",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600200
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600201
+        }
+      },
+      "item3":{
+        "name":"Apre canc pedonale",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600300
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600301
+        }
+      },
+      "item4":{
+        "name":"PP cancello carraio",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600400
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600401
+        }
+      },
+      "item5":{
+        "name":"Basculante 1",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600500
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600501
+        }
+      },
+      "item6":{
+        "name":"Basculante 2",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600600
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600601
+        }
+      },
+      "item7":{
+        "name":"raffreddare",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600700
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600701
+        }
+      },
+      "item8":{
+        "name":"antilegionella start",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600800
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600801
+        }
+      },
+      "item9":{
+        "name":"antilegionella stop",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600900
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600901
+        }
+      },
+      "item16":{
+        "name":"Apri oscur notte",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1601600
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1601601
+        }
+      },
+      "item17":{
+        "name":"Chiudi oscur notte",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1601700
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1601701
+        }
+      },
+      "item18":{
+        "name":"Apre oscur matrimon",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1601800
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1601801
+        }
+      },
+      "item19":{
+        "name":"Chiudi oscur matrim",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1601900
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1601901
+        }
+      },
+      "item20":{
+        "name":"Spegni luce P1",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1602000
+        },
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1602001
+        }
+      }
+    },
+    "alarms_logics":{
+      "item0":{
+        "name":"allarme",
+        "sumstate":{
+          "value":"55.0;",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1700000
+        },
+        "scmd":{
+          "value":"S44.7 (SetpointValue)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1700001
+        }
+      },
+      "item8":{
+        "name":"abilitiazione igrost",
+        "sumstate":{
+          "value":"55.0;",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1700800
+        },
+        "scmd":{
+          "value":"S44.7 (SetpointValue)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1700801
+        }
+      },
+      "item9":{
+        "name":"comando igrostato",
+        "sumstate":{
+          "value":"55.0;",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1700900
+        },
+        "scmd":{
+          "value":"S44.7 (SetpointValue)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1700901
+        }
+      }
+    }
+  }
 }
