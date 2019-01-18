@@ -1,4 +1,6 @@
 {
+"v1:"
+{
   "globals": {
     "network": {
       "gekkoname": {
@@ -34,4 +36,6 @@
       }
     }
   }
+}
+
 }
