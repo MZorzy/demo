@@ -1,39 +1,39 @@
 {
-"v1": {
-  "globals": {
-    "network": {
-      "gekkoname": {
-        "value": "Hostname of myGEKKO",
-        "type": "STRING",
-        "permission": "READ",
-        "index": 1
-      }
-    },
-    "alarm": {
-      "sumstate": {
-        "value": "0|2|3 (OK|ACKNOWLEDGED|ALARM)",
-        "type": "INT",
-        "permission": "READ",
-        "index": 101
-      }
-    }
-  },
-  "lights": {
-    "item96": {
-      "name": "Empfang",
-      "sumstate": {
-        "value": "0;77;45476;0 (On|Off; DimmValue;RGBColor;Locked)",
-        "type": "STRING",
-        "permission": "READ",
-        "index": 109600
+   "v1":{
+      "globals":{
+         "network":{
+            "gekkoname":{
+               "value":"Hostname of myGEKKO",
+               "type":"STRING",
+               "permission":"READ",
+               "index":1
+            }
+         },
+         "alarm":{
+            "sumstate":{
+               "value":"0|2|3 (OK|ACKNOWLEDGED|ALARM)",
+               "type":"INT",
+               "permission":"READ",
+               "index":101
+            }
+         }
       },
-      "scmd": {
-        "value": "1|0|D100|C44782 (On|Off|Dim%|RGB24Bit)",
-        "type": "STRING",
-        "permission": "WRITE",
-        "index": 109601
+      "lights":{
+         "item96":{
+            "name":"Empfang",
+            "sumstate":{
+               "value":"0;77;45476;0 (On|Off; DimmValue;RGBColor;Locked)",
+               "type":"STRING",
+               "permission":"READ",
+               "index":109600
+            },
+            "scmd":{
+               "value":"1|0|D100|C44782 (On|Off|Dim%|RGB24Bit)",
+               "type":"STRING",
+               "permission":"WRITE",
+               "index":109601
+            }
+         }
       }
-    }
-  }
-}
+   }
 }
