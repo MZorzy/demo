@@ -67,252 +67,252 @@
           "permission":"WRITE",
           "index":302
         }
-      },
-      "lights":{
-        "item0":{
-          "name":"CL 33 + 34",
-          "sumstate":{
-            "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":100000
-          },
-          "scmd":{
-            "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":100001
-          }
+      }
+    },
+    "lights":{
+      "item0":{
+        "name":"CL 33 + 34",
+        "sumstate":{
+          "value":"0;77;45476;0 (On|Off;DimmValue;RGBColor;Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":100000
+        },
+        "scmd":{
+          "value":"1|0|D100|T|C44782 (On|Off|Dim%|Toggle|RGB24Bit)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":100001
+        }
+      }
+    },
+    "blinds":{
+      "item0":{
+        "name":"Oscurante 9",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200000
+        },
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200001
         }
       },
-      "blinds":{
-        "item0":{
-          "name":"Oscurante 9",
-          "sumstate":{
-            "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":200000
-          },
-          "scmd":{
-            "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":200001
-          }
+      "item1":{
+        "name":"Oscurante 10",
+        "sumstate":{
+          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":200100
         },
-        "item1":{
-          "name":"Oscurante 10",
-          "sumstate":{
-            "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":200100
-          },
-          "scmd":{
-            "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":200101
-          }
+        "scmd":{
+          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":200101
+        }
+      }
+    },
+    "vents":{
+      "item0":{
+        "name":"Piano Terra",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300000
+        },
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300001
         }
       },
-      "vents":{
-        "item0":{
-          "name":"Piano Terra",
-          "sumstate":{
-            "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":300000
-          },
-          "scmd":{
-            "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":300001
-          }
+      "item1":{
+        "name":"Piano Primo",
+        "sumstate":{
+          "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":300100
         },
-        "item1":{
-          "name":"Piano Primo",
-          "sumstate":{
-            "value":"3;1;0;0;4;55.7;64.0;54.7;22.1;22.8;7.6;9.3;33.3;33.3;0; (Level|Type|Mode|Bypassstate|MaxLevel|Humidity|CO2|VOC|TempSupplyAir|TempExhaustAir|TempOutsideAir|TempOutgoingAir|LevelIn%|LevelOut%|Locked)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":300100
-          },
-          "scmd":{
-            "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":300101
-          }
+        "scmd":{
+          "value":"-1|1|2|3|4|T (Off|Level1|Level2|Level3|Level4|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":300101
+        }
+      }
+    },
+    "loads":{
+      "item0":{
+        "name":"Asciugatrice",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400000
         },
-        "loads":{
-          "item0":{
-            "name":"Asciugatrice",
-            "sumstate":{
-              "value":"0|1|2 (Off|On Impulse|On Permanent)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":400000
-            },
-            "scmd":{
-              "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":400001
-            }
-          },
-          "item1":{
-            "name":"Lavatrice",
-            "sumstate":{
-              "value":"0|1|2 (Off|On Impulse|On Permanent)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":400100
-            },
-            "scmd":{
-              "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":400101
-            }
-          }
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400001
+        }
+      },
+      "item1":{
+        "name":"Lavatrice",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":400100
         },
-        "roomtemps":{
-          "item0":{
-            "name":"Taverna",
-            "sumstate":{
-              "value":"0|1|2 (Off|On Impulse|On Permanent)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":500000
-            },
-            "scmd":{
-              "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":500001
-            }
-          },
-          "item1":{
-            "name":"Corridoio ing. retro",
-            "sumstate":{
-              "value":"0|1|2 (Off|On Impulse|On Permanent)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":500100
-            },
-            "scmd":{
-              "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":500101
-            }
-          }
+        "scmd":{
+          "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":400101
+        }
+      }
+    },
+    "roomtemps":{
+      "item0":{
+        "name":"Taverna",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500000
         },
-        "heatingcircuits":{
-          "item0":{
-            "name":"circuito pt",
-            "sumstate":{
-              "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
-              "type":"STRING",
-              "permission":"READ",
-              "index":700000
-            }
-          },
-          "item1":{
-            "name":"circuito pp",
-            "sumstate":{
-              "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
-              "type":"STRING",
-              "permission":"READ",
-              "index":700100
-            }
-          }
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500001
+        }
+      },
+      "item1":{
+        "name":"Corridoio ing. retro",
+        "sumstate":{
+          "value":"0|1|2 (Off|On Impulse|On Permanent)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":500100
         },
-        "heatingsystems":{
-          "item0":{
-            "name":"pompa di calore",
-            "sumstate":{
-              "value":"0;0;54.2;60.0;1; (Type;0=Heating|1=Cooling;Flow temp.;Request temp.;1=On|0=Off;)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":750000
-            }
-          }
+        "scmd":{
+          "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":500101
+        }
+      }
+    },
+    "heatingcircuits":{
+      "item0":{
+        "name":"circuito pt",
+        "sumstate":{
+          "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
+          "type":"STRING",
+          "permission":"READ",
+          "index":700000
+        }
+      },
+      "item1":{
+        "name":"circuito pp",
+        "sumstate":{
+          "value":"0;34.6;100.0;0;38.0;77.5; (Type;Flow temp.;Pump[%];0=Heating|1=Cooling;Flow setpoint;Valve[%])",
+          "type":"STRING",
+          "permission":"READ",
+          "index":700100
+        }
+      }
+    },
+    "heatingsystems":{
+      "item0":{
+        "name":"pompa di calore",
+        "sumstate":{
+          "value":"0;0;54.2;60.0;1; (Type;0=Heating|1=Cooling;Flow temp.;Request temp.;1=On|0=Off;)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":750000
+        }
+      }
+    },
+    "energycosts":{
+      "item0":{
+        "name":"Consumo abitazione",
+        "sumstate":{
+          "value":"2.50;0.01;0.01;0.01;10.00;kWh;kW;0;0;6;0;0;0;0;0;1; (Act.power;Energy today;Energy month;Energy sum;Power max.;Unit energy;Unit power;Energy today 0-6;6-12;12-18;18-24;Energy yesterd. 0-6;6-12;12-18;18-24;1=Act.Power avaiable)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":800000
+        }
+      }
+    },
+    "energymanager":{
+      "item0":{
+        "name":"",
+        "sumstate":{
+          "value":"TR; ;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3;0; (Name;;NetOk;SolarOk;BatOk;PNet[W];PExport[W];PSolar[W];PBat[W];PBatCharge[W];PHome;PAlternate[W];EImport[Wh];EExport[Wh];ESolar[Wh];EBat[Wh];EBatCharge[Wh];EHome[Wh];WIconTd;EPrevTd[kWh];WIconTm;EPrevTm[kWh];1=LoadSheddingActive;1=EMSActive;BatType;BatSoc[%];1=EMSEnabled;PMaxNet[kW];PNetExportMax[kW];)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":2700000
+        }
+      }
+    },
+    "actions":{
+      "item0":{
+        "name":"Apre oscuranti",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600000
         },
-        "energycosts":{
-          "item0":{
-            "name":"Consumo abitazione",
-            "sumstate":{
-              "value":"2.50;0.01;0.01;0.01;10.00;kWh;kW;0;0;6;0;0;0;0;0;1; (Act.power;Energy today;Energy month;Energy sum;Power max.;Unit energy;Unit power;Energy today 0-6;6-12;12-18;18-24;Energy yesterd. 0-6;6-12;12-18;18-24;1=Act.Power avaiable)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":800000
-            }
-          }
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600001
+        }
+      },
+      "item2":{
+        "name":"Spegni luci",
+        "sumstate":{
+          "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1600200
         },
-        "energymanager":{
-          "item0":{
-            "name":"",
-            "sumstate":{
-              "value":"TR; ;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3;0; (Name;;NetOk;SolarOk;BatOk;PNet[W];PExport[W];PSolar[W];PBat[W];PBatCharge[W];PHome;PAlternate[W];EImport[Wh];EExport[Wh];ESolar[Wh];EBat[Wh];EBatCharge[Wh];EHome[Wh];WIconTd;EPrevTd[kWh];WIconTm;EPrevTm[kWh];1=LoadSheddingActive;1=EMSActive;BatType;BatSoc[%];1=EMSEnabled;PMaxNet[kW];PNetExportMax[kW];)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":2700000
-            }
-          }
+        "scmd":{
+          "value":"-1|1|T (STOP|START|TOGGLE)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1600201
+        }
+      }
+    },
+    "alarms_logics":{
+      "item0":{
+        "name":"allarme",
+        "sumstate":{
+          "value":"55.0;",
+          "type":"STRING",
+          "permission":"READ",
+          "index":1700000
         },
-        "actions":{
-          "item0":{
-            "name":"Apre oscuranti",
-            "sumstate":{
-              "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":1600000
-            },
-            "scmd":{
-              "value":"-1|1|T (STOP|START|TOGGLE)",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":1600001
-            }
-          },
-          "item2":{
-            "name":"Spegni luci",
-            "sumstate":{
-              "value":"1;1; (0=OFF|1=ON;0=LOCKED|1=ENABLED)",
-              "type":"STRING",
-              "permission":"READ",
-              "index":1600200
-            },
-            "scmd":{
-              "value":"-1|1|T (STOP|START|TOGGLE)",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":1600201
-            }
-          }
-        },
-        "alarms_logics":{
-          "item0":{
-            "name":"allarme",
-            "sumstate":{
-              "value":"55.0;",
-              "type":"STRING",
-              "permission":"READ",
-              "index":1700000
-            },
-            "scmd":{
-              "value":"S44.7 (SetpointValue)",
-              "type":"STRING",
-              "permission":"WRITE",
-              "index":1700001
-            }
-          }
+        "scmd":{
+          "value":"S44.7 (SetpointValue)",
+          "type":"STRING",
+          "permission":"WRITE",
+          "index":1700001
         }
       }
     }
