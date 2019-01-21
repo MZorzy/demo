@@ -131,36 +131,6 @@
           "permission":"WRITE",
           "index":200101
         }
-      },
-      "item2":{
-        "name":"Oscurante 11",
-        "sumstate":{
-          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
-          "type":"STRING",
-          "permission":"READ",
-          "index":200200
-        },
-        "scmd":{
-          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
-          "type":"STRING",
-          "permission":"WRITE",
-          "index":200201
-        }
-      },
-      "item15":{
-        "name":"Oscurante 8",
-        "sumstate":{
-          "value":"0;45.6;22.6;0 (-2=hold_down|-1=down|0=stop|1=up|2=hold_up;Position;Angle;Locked;SlatRotationArea)",
-          "type":"STRING",
-          "permission":"READ",
-          "index":201500
-        },
-        "scmd":{
-          "value":"-2|-1|0|1|2|T|P55.4|S32.4 (hold_down|down|stop|up|hold_up|Toggle|Position|Angle)",
-          "type":"STRING",
-          "permission":"WRITE",
-          "index":201501
-        }
       }
     },
     "vents":{
@@ -239,21 +209,6 @@
             "permission":"WRITE",
             "index":400101
           }
-        },
-        "item9":{
-          "name":"Tirante bagno",
-          "sumstate":{
-            "value":"0|1|2 (Off|On Impulse|On Permanent)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":400900
-          },
-          "scmd":{
-            "value":"0|1|2|T (Off|On Impulse|On Permanent|Toggle)",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":400901
-          }
         }
       },
       "roomtemps":{
@@ -300,51 +255,6 @@
             "type":"STRING",
             "permission":"WRITE",
             "index":500201
-          }
-        },
-        "item12":{
-          "name":"Bagno ospiti p1",
-          "sumstate":{
-            "value":"0|1|2 (Off|On Impulse|On Permanent)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":501200
-          },
-          "scmd":{
-            "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":501201
-          }
-        },
-        "item13":{
-          "name":"Salone/disimpegno",
-          "sumstate":{
-            "value":"0|1|2 (Off|On Impulse|On Permanent)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":501300
-          },
-          "scmd":{
-            "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":501301
-          }
-        },
-        "item14":{
-          "name":"Bagno matrimoniale",
-          "sumstate":{
-            "value":"0|1|2 (Off|On Impulse|On Permanent)",
-            "type":"STRING",
-            "permission":"READ",
-            "index":501400
-          },
-          "scmd":{
-            "value":"M1|M8|M16|M64|M256|K2.4 (Mode_Off|Mode_Auto|Mode_Reduced|Mode_Standby|Mode_Manual|Temp. adjustment[°C])",
-            "type":"STRING",
-            "permission":"WRITE",
-            "index":501401
           }
         }
       },
